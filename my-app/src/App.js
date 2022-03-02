@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -12,6 +11,7 @@ function App() {
       .get("https://jsonplaceholder.typicode.com/photos")
       .then((res) => {
         setItem(res.data);
+        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
